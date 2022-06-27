@@ -1,16 +1,24 @@
 # hello-igl
 Experimenting with https://libigl.github.io/tutorial/
 
-## Setup (tested with vscode, arch linux x64)
-### Packages
+## Build / Run
+### Pure cmake commands
 ```shell
-git submodule update --init --recursive
-./lib/vcpkg/bootstrap-vcpkg.sh
-./lib/vcpkg/vcpkg install libigl[glfw]
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./src/main
 ```
-
-### Configure / Build / Run (using `ms-vscode.cmake-tools` vscode extension)
+### Or using `ms-vscode.cmake-tools` vscode extension) (delete build folder if switching from pure cmake above)
 - Command Palette: Cmake:Configure 
 - Command Palette: Cmake:Build
 - Command Palette: Cmake:Run Without Debugging
  
+## Notes, setup (tested with vscode, arch linux x64)
+### Packages
+```shell
+git submodule update --init --recursive
+./lib/vcpkg/bootstrap-vcpkg.sh
+# ./lib/vcpkg/vcpkg install libigl[glfw]
+```
