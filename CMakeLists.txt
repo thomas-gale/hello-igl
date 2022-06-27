@@ -14,4 +14,10 @@ list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 option(LIBIGL_GLFW "Build target igl::glfw" ON)
 include(libigl)
 
-add_subdirectory(src)
+# Main executable
+add_executable(main
+	src/main.cpp)
+target_link_libraries(main PUBLIC igl::glfw)
+
+# Resources
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/resources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
