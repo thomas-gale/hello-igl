@@ -15,10 +15,10 @@ cmake --build .
 - Command Palette: Cmake:Build
 - Command Palette: Cmake:Run Without Debugging
  
-## Notes, setup (tested with vscode, arch linux x64)
-### Packages
+### Optional vcpkg usage
 ```shell
 git submodule update --init --recursive
 ./lib/vcpkg/bootstrap-vcpkg.sh
-# ./lib/vcpkg/vcpkg install libigl[glfw]
+# Note, we are not using libigl vcpkg, but instead using the cmake module in ./cmake (recommended method by libigl folks)
+# ./lib/vcpkg/vcpkg install libigl[glfw] 
 ```
